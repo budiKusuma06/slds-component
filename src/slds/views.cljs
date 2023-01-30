@@ -7,6 +7,7 @@
    [reagent.core :as r]
    [slds.components.buttons :as btn]
    [slds.components.form :as form]
+   [slds.components.app-launcher :as app]
    ))
 
 (def variant "neutral")
@@ -24,22 +25,25 @@
 
     ;;  [:div
     ;;   (btn/label-success"post" false)]
-
+       
     ;;  [:div
     ;;   (btn/icon-success "add" false)] 
-
+       
     ;;  [:div
     ;;   (btn/icon-rt-success "add" "add" false)]
        [:div
         [form/checkbox {:labl "cek" 
                         :required? true 
-                         :error? false}]]
+                        :error? false}]]
 
        [:div
         [form/checkbox-btn {:checked? (:is-cheap? @form)
                             :on-checked #(let [prev-state (:is-cheap? @form)]
                                            (reset! form (assoc @form :is-cheap? (not prev-state))))}]] 
-       [:div "is cheap?" [:label (str (:is-cheap? @form))]]])))
+       [:div "is cheap?" [:label (str (:is-cheap? @form))]]
+       
+       [app/app-launcher]
+       ])))
 
 (defmethod routes/panels :home-panel [] [home-panel])
 
