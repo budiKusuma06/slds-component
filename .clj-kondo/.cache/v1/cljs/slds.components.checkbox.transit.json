@@ -1,0 +1,1 @@
+["^ ","~$checkbox",["^ ","~:row",3,"~:col",1,"~:fixed-arities",["~#set",[2]],"~:name","^0","~:ns","~$slds.components.checkbox","~:top-ns","^7","~:arities",["^ ","~i2",["^ ","~:ret","~:vector","~:arglist-str","[labl disabled?]"]],"~:type","~:fn"],"~:filename","/home/noisy/clojure/src/slds/src/slds/components/form.cljs"]
